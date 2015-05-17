@@ -6,8 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap.min.css" />
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular.min.js"></script>
-        <script type="text/javascript" src="shop.js"></script>
         <script type="text/javascript" src="bower_components/angular-uid/angular-uid.js"></script>
+        <script type="text/javascript" src="bower_components/pouchdb/dist/pouchdb.min.js"></script>
+        <script type="text/javascript" src="shop.js"></script>
     </head>
     <body ng-controller="ShopController as shop">
         <!--  Products Container  -->
@@ -15,7 +16,7 @@
             <!--  Product Container  -->
             <div class="list-group-item" ng-repeat="item in shop.items">
                   <p>
-                      <button  ng-click="shop.deleteItem(item, shop.items)">X</button> {{item.name}} ({{item.quantity}}/{{item.uid}}) - {{item.shop}}
+                      <button  ng-click="shop.deleteItem(item, shop.items)">X</button> {{item.name}} ({{item.quantity}}) - {{item.shop}}
                   </p>
             </div>
         </div>
